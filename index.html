@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up - CodeWell</title>
+</head>
+<body>
+    <main>
+        <section id="img-container">
+            <h1 class="main-title">Gradie</h1>
+            <p class="slogan">Beautiful gradients in seconds.</p>
+        </section>
+
+        <section id="input-container">
+            <h1 class="title-login" id="login-main-title">Login</h1>
+
+            <form action="" id="form">
+
+                <label for="email" class="label-input">Email</label>
+                <div id="email-container">
+                    <input type="email" name="email" id="email" class="input" placeholder="john@example.com">
+                    <img class="icon-error" id="icon-error-email" src="icon-error.svg" alt="">
+                    <p class="error-msg" id="email-error-msg">Please provide a valid email address</p>
+                </div>
+                
+                <label for="password" class="label-input">Password</label>
+                <div id="password-container">
+                    <input type="password" name="password" id="password" class="input" placeholder="At least 8 characters">
+                    <img class="icon-error" id="icon-error-password" src="icon-error.svg" alt="">
+                    <p class="error-msg" id="password-error-msg">Password must contain at least 8 characters</p>
+                </div>
+                
+                <div id="checkbox-container">
+                    <input type="checkbox" name="terms" id="terms" class="checkbox">
+                    <label for="terms" class="label-checkbox">By creating an account, you agree to the <a href="/" class="linkTerms">Terms & Conditions.</a></label>
+                    <p class="error-msg" id="checkbox-error-msg">To continue you have to agree the Terms & Conditions</p>
+                </div>
+                
+
+                <button type="submit" id="btn-submit">Create an Account</button>
+
+                <script src="app.js"></script>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

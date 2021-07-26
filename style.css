@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-blue: #013243;
+    --turquoise: #68d8d6;
+    --purple: #3a0ca3;
+    --btn-hover: #1d3557;
+    --link-hover: #023e8a;
+}
+
+body, main{
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+body{
+    background: url('./Assets/Background.png') no-repeat;
+    background-size: cover;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 320px;
+}
+
+#img-container{
+    background: var(--dark-blue)  url('./Assets/iPhone\ Mockup.png') no-repeat bottom;
+    background-size: contain;
+    height: 50vh;
+}
+
+.main-title{
+    color: white;
+    margin-top: 10%;
+    font-size: 1.8rem;
+}
+
+.slogan {
+    color: var(--turquoise);
+    opacity: 70%;
+    margin-top: 3%;
+    font-weight: 300;
+}
+
+.slogan, .main-title{
+    text-align: center;
+}
+
+#input-container{
+    height: 50vh;
+    padding: 10%;
+    background: white;
+}
+
+.title-login{
+    font-size: 2rem;
+    margin-bottom: 8%; /*6% with errors*/
+}
+
+.label-input{
+    font-weight: bold;
+}
+
+.input{
+    border: solid 1px silver;
+    outline: none;
+    position: relative;
+}
+
+#form{
+    position: relative;
+}
+
+.input:focus{
+    border: solid 1.5px var(--purple);
+    border-radius: 5px;
+}
+
+.input::placeholder{
+    color:silver;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input, #btn-submit{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#email-container, #password-container {
+    margin-bottom: 6%; /*4% with errors*/
+    margin-top: 2%;
+    position: relative;
+}
+
+#btn-submit{
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    margin-top: 6%;
+    font-weight: 500;
+    font-size: 1rem;
+    background: var(--dark-blue);
+    color: white;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+    margin-bottom: 5%;
+}
+
+#btn-submit:hover{
+    background: var(--btn-hover);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checkbox{
+    height: 17px;
+    width: 17px;
+    border-radius: 5px;
+    border: solid 1px silver;
+}
+
+.label-checkbox{
+    font-weight: 400;
+}
+
+.linkTerms{
+    color: var(--dark-blue);
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.linkTerms:hover{
+    color: var(--link-hover);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.icon-error{
+    position: absolute;
+    bottom: 45%;
+    right: 5%;
+}
+
+.error-msg{
+    font-size: 0.7rem;
+    text-align: end;
+    color: var(--soft-red);
+    margin-top: 1%;
+}
+
+.icon-error, .error-msg{
+    display: none;
+}
+
+.errorInput{
+    border: solid 2px var(--soft-red);
+    opacity: 90%;
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+    main{
+        max-width: 480px;
+        margin: auto;
+    }
+    #input-container {
+        padding: 12%;
+        border-radius: 0 0 10px 10px;
+    }
+    #img-container {
+        height: 45vh;
+        position: relative;
+        border-radius: 10px 10px 0 0;
+    }
+    .main-title, .slogan {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .main-title{
+        top: 15%;
+        font-size: 2.3rem;
+    }
+    .slogan{
+        top: 25%;
+        font-size: 1.2rem;
+    }
+    .input{
+        font-size: 1.2rem;
+    }
+    .title-login{
+        font-size: 2.5rem;
+        margin-bottom: 6%;
+    }
+    .label-input{
+        font-size: 1.4rem;
+    }
+    .label-checkbox {
+        font-size: 1.2rem;
+    }
+    #btn-submit{
+        margin-top: 10%;
+        font-size: 1.3rem;
+    }
+    .checkbox {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #input-container {
+        height: 75vh;
+        padding: 5%;
+        width: 50%;
+        border-radius: 0 10px 10px 0;
+        max-height: 500px;
+    }
+    #img-container {
+        height: 75vh;
+        width: 55%;
+        border-radius: 10px 0 0 10px;
+        max-height: 500px;
+    }
+    main {
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        max-width: 960px;
+    }
+}

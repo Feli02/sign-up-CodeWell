@@ -34,7 +34,7 @@ main{
 #img-container{
     background: var(--dark-blue)  url('./Assets/iPhone\ Mockup.png') no-repeat bottom;
     background-size: contain;
-    height: 50vh;
+    height: 60vh;
 }
 
 .main-title{
